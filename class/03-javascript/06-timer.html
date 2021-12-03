@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <script>
+        let isStarted = false;
+        getToken = () =>{
+            if (isStarted === false){
+                isStarted === true;
+                const token = String(Math.floor(Math.random()*1000000)).padStart(6,"0")
+                document.getElementById("btn").innerText = token
+
+                let time = 10
+            
+                setInterval(function(){
+                    if (time >= 0){
+                        const min = String(Math.floor(time/60)).padStart(2, "0")
+                        const sec = String(time % 60).padStart(2, "0")
+                        document.getElementById("timer").innerText = min + ":" + sec
+                        time = time - 1
+                    }
+                    else{
+                        btn = document.getElementById('timer_btn')
+                        btn.disabled = true;
+                    }
+                }, 1000
+            )
+            } else {
+                alert('너 이미 실행했어')
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class= "num">
+        <h1 id = "btn">000000</h1>
+        <button onclick="getToken()">인증번호 전송</button>
+    </div>
+    <div class ="time">
+    <h1 id = "timer">03:00</h1>
+    <button onclick="getTimer()" id ="timer_btn">인증완료</button>
+    </div>
+</body>
+</html>

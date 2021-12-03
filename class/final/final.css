@@ -1,0 +1,31 @@
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+
+
+.input_text{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.input_num{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.number_send{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+   
+}
